@@ -1,7 +1,7 @@
 import "dart:math";
 import 'package:flutter/material.dart';
 
-import '../.config.dart';
+import '../config.dart';
 
 double getWidth(BuildContext context, [int percent = 100]) {
   return (percent / 100) * MediaQuery.of(context).size.width;

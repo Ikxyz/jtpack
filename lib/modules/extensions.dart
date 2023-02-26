@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:jtpack/modules/utils.dart';
 import 'package:flutter/material.dart';
 
-import '../.config.dart';
+import '../config.dart';
 
 final _moneyFormat = NumberFormat("#,##0.00", "en_US");
 

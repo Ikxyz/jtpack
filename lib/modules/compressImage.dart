@@ -1,8 +1,6 @@
 // ignore_for_file: file_names
 
-
 // import "package:flutter_image_compress/flutter_image_compress.dart";
-
 
 const imageQUALITY = 80;
 

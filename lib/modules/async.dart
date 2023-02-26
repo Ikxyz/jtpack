@@ -4,7 +4,6 @@ import 'package:dio/dio.dart';
 
 import 'log.dart';
 
-
 typedef AsyncTask<T> = Future<T> Function();
 
 class AsyncHandler<T> {

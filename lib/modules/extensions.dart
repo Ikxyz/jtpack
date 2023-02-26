@@ -59,8 +59,10 @@ extension NumToMoneyFormatExtension on num {
     return _moneyFormat.format(this);
   }
 
-  double get height => getHeight(navigatorGlobalKey.currentState!.context, toInt());
-  double get width => getWidth(navigatorGlobalKey.currentState!.context, toInt());
+  double get height =>
+      getHeight(navigatorGlobalKey.currentState!.context, toInt());
+  double get width =>
+      getWidth(navigatorGlobalKey.currentState!.context, toInt());
 
   Widget get spaceVertical => SizedBox(height: toDouble());
   Widget get spaceHorizontal => SizedBox(width: toDouble());

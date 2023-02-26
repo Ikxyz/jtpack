@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jtpack/modules/extensions.dart';
 
-
 /// return an error message if value does not pass the validation
 ///validation requires val: not equal null
 String? isNotNull(String? val) {

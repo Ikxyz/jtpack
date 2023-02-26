@@ -1,8 +1,3 @@
 library jtpack;
 
-/// A Calculator.
-class JtPack {
-
-
-
-}
+export "./modules/_modules.dart";

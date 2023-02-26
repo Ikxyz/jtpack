@@ -1,12 +1,8 @@
 // ignore_for_file: file_names
 
-import "dart:io";
-import "dart:typed_data";
 
 // import "package:flutter_image_compress/flutter_image_compress.dart";
-import "package:path_provider/path_provider.dart";
 
-import "log.dart";
 
 const imageQUALITY = 80;
 

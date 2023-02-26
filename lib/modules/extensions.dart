@@ -4,7 +4,6 @@ import 'package:jtpack/modules/utils.dart';
 import 'package:flutter/material.dart';
 
 import '../config.dart';
-import '../jtpack.dart';
 
 final _moneyFormat = NumberFormat("#,##0.00", "en_US");
 

@@ -21,6 +21,19 @@ extension ExString on String {
     return strArr.join(" ");
   }
 
+  /// Capitalize Text
+  String get fromCamelToCapitalize {
+    List<String> strArr = trim().split(" ");
+
+    strArr = strArr.map((e) {
+      if (e == "") return "";
+      final String index = e[0];
+      return e.replaceFirst(index, ' ${index.toUpperCase()}');
+    }).toList();
+
+    return strArr.join(" ");
+  }
+
   /// Generate Random String
   String get generateID {
     return generateId(null, 16);
@@ -56,7 +69,7 @@ extension MyContext on BuildContext {
 extension NumToMoneyFormatExtension on num {
   String toMoney({String? symbol}) {
     symbol ??= "\$";
-    return _moneyFormat.format(this);
+    return '$symbol ${_moneyFormat.format(this)}';
   }
 
   double get height =>

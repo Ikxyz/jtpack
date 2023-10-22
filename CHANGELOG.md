@@ -1,3 +1,13 @@
+## 0.0.8
+
+* Code Cleanup
+## 0.0.7
+
+* Code Cleanup
+## 0.0.6
+
+* Code Cleanup
+
 ## 0.0.5
 
 * Update Docs

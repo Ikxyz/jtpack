@@ -2,6 +2,7 @@ import "dart:convert";
 
 import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
+import "package:jtpack/jtpack.dart";
 
 import "notification.dart";
 
@@ -37,7 +38,8 @@ class Log {
   }
 
   Log show([BuildContext? context]) {
-    if (context != null) {
+    context ??= JtPack.getGlobalNavigatorKey.currentState?.context;
+    if (context != null && context.mounted) {
       Alert(context).showSnackbar(message);
     }
     return this;

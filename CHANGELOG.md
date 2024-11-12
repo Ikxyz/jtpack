@@ -1,3 +1,7 @@
+## 0.0.11
+
+* Update async handler
+
 ## 0.0.8
 
 * Code Cleanup

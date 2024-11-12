@@ -11,15 +11,17 @@ class AsyncHandler<T> {
     try {
       // Async Task
       return await task();
-    } on DioError catch (dioErr) {
-      if (dioErr.type == DioErrorType.unknown) {
+    } on DioException catch (dioErr) {
+      if (dioErr.type == DioExceptionType.unknown) {
         throw Log("unable to reach server at the moment, try again",
-                code: 400, logType: LogType.network)
+                code: dioErr.response?.statusCode ?? 400,
+                logType: LogType.network)
             .log();
       }
-      if (dioErr.type == DioErrorType.badResponse) {
+      if (dioErr.type == DioExceptionType.badResponse) {
         throw Log(dioErr.response!.data?['message'],
-                code: 400, logType: LogType.network)
+                code: dioErr.response?.statusCode ?? 400,
+                logType: LogType.network)
             .log();
       }
       throw Log(dioErr.response!.statusMessage ?? "network error",
@@ -29,6 +31,8 @@ class AsyncHandler<T> {
       throw Log("check network and try again",
               code: 400, logType: LogType.network)
           .log();
+    } on Log catch (_) {
+      rethrow;
     } catch (err) {
       throw Log("error occurred processing request, $err",
               code: 400, logType: LogType.runtime)

@@ -21,7 +21,6 @@ class AssignIf {
       (await task()) ?? resultTo;
 }
 
-@immutable
 class RenderIf extends StatelessWidget {
   final bool isTrue;
   final Widget child;

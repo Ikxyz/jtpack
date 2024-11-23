@@ -6,16 +6,20 @@ class Alert {
 
   final BuildContext context;
 
-
-  showSnackbar(String message,{toast=Toast.LENGTH_SHORT,gravity=ToastGravity.TOP, backgroundColor=Colors.black87,textColor=Colors.white,fontSize= 16.0}) {
+  showSnackbar(String message,
+      {toast = Toast.LENGTH_LONG,
+      gravity = ToastGravity.TOP,
+      backgroundColor = Colors.black87,
+      textColor = Colors.white,
+      fontSize = 16.0}) {
     Fluttertoast.showToast(
-    msg: message,
-    toastLength: toast,
-    gravity: gravity, // This makes it appear at the top
-    backgroundColor: backgroundColor,
-    textColor: textColor,
-    fontSize: fontSize,
-  );
+      msg: message,
+      toastLength: toast,
+      gravity: gravity, // This makes it appear at the top
+      backgroundColor: backgroundColor,
+      textColor: textColor,
+      fontSize: fontSize,
+    );
   }
 
   // showSnackbar(String message) {

@@ -40,26 +40,28 @@ class Log {
   }
 
   Log show([BuildContext? context]) {
-    context ??= navigatorGlobalKey.currentState?.context;
-    if (context != null && context.mounted) {
-      if (code >= 500) {
-        return Alert(context).showSnackbar(message,
-            toast: Toast.LENGTH_LONG,
-            textColor: Colors.white,
-            backgroundColor: Colors.red);
-      } else if (code == 400) {
-        return Alert(context).showSnackbar(message,
-            toast: Toast.LENGTH_LONG,
-            textColor: Colors.white,
-            backgroundColor: Colors.amber);
-      } else if (code == 200) {
-        return Alert(context).showSnackbar(message,
-            toast: Toast.LENGTH_LONG,
-            textColor: Colors.white,
-            backgroundColor: Colors.blue);
+    try {
+      context ??= navigatorGlobalKey.currentState?.context;
+      if (context != null && context.mounted) {
+        if (code >= 500) {
+          return Alert(context).showSnackbar(message,
+              toast: Toast.LENGTH_LONG,
+              textColor: Colors.white,
+              backgroundColor: Colors.red);
+        } else if (code == 400) {
+          return Alert(context).showSnackbar(message,
+              toast: Toast.LENGTH_LONG,
+              textColor: Colors.white,
+              backgroundColor: Colors.amber);
+        } else if (code == 200) {
+          return Alert(context).showSnackbar(message,
+              toast: Toast.LENGTH_LONG,
+              textColor: Colors.white,
+              backgroundColor: Colors.blue);
+        }
+        return Alert(context).showSnackbar(message, toast: Toast.LENGTH_LONG);
       }
-      return Alert(context).showSnackbar(message, toast: Toast.LENGTH_LONG);
-    }
+    } catch (e) {}
     return this;
   }
 
@@ -84,7 +86,7 @@ class Log {
   }
 
   factory Log.fromObject(Object? obj, {code = 400, logType = LogType.info}) {
-    // if (obj is Null) return Log("Unknown Error Occurred", code: 400);
+    if (obj == null) return Log("Object is empty", code: 400);
     if (obj is String) {
       return Log(obj.toString(), code: 400);
     }

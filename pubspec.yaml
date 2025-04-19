@@ -1,6 +1,6 @@
 name: jtpack
-description: This package is intended for personal use only and not for the general public
-version: 0.0.19
+description: This package is intended make life easier for developers
+version: 0.0.20
 homepage: https://github.com/Ikxyz/jtpack
 
 environment:
@@ -25,7 +25,7 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
-flutter:
+# flutter:
 
   # To add assets to your package, add an assets section, like this:
   # assets:

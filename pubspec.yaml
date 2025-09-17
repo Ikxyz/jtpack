@@ -1,6 +1,6 @@
 name: jtpack
 description: This package is intended make life easier for developers
-version: 0.0.20
+version: 0.0.21
 homepage: https://github.com/Ikxyz/jtpack
 
 environment:
@@ -12,7 +12,11 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_riverpod: ^2.2.0
-  fluttertoast: ^8.2.12
+  fluttertoast:
+    git:
+      url: https://github.com/suhail-121/FlutterToast.git
+      ref: master
+      publish_to: none
   intl: ^0.20.2
   path_provider: ^2.0.13
 

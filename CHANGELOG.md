@@ -1,3 +1,11 @@
+## 0.0.21
+
+* Fix fluttertoast dependency to use Git repository for Android SDK 36 compatibility
+
+## 0.0.20
+
+* Update Readme
+
 ## 0.0.14
 
 * Update tasts notification

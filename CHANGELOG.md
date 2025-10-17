@@ -1,6 +1,6 @@
 ## 0.0.21
 
-* Fix fluttertoast dependency to use Git repository for Android SDK 36 compatibility
+* Revert fluttertoast dependency to published package version 9.0.0 from git repository
 
 ## 0.0.20
 
